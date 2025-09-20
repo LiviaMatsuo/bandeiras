@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandeiras</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h1>Bandeiras</h1>
+    <div class="stats">
+        Movimentos: <span id="moves">0</span> | Tempo: <span id="timer">0</span>
+    </div>
+
+    <main id="board" class="board">
+        <div class="flags-section">
+            <div class="flag" data-flag="argentina">
+                <img class="flag-img" src="/img/argentina.jpeg" alt="bandeira da argentina" data-flag="argentina">
+            </div>
+
+            <div class="flag" data-flag="brasil">
+                <img class="flag-img" src="/img/brasil.jpeg" alt="bandeira do brasil" data-flag="brasil">
+            </div>
+
+            <div class="flag" data-flag="cuba">
+                <img class="flag-img" src="/img/cuba.jpeg" alt="bandeira da cuba" data-flag="cuba">
+            </div>
+
+            <div class="flag" data-flag="egito">
+                <img class="flag-img" src="/img/egito.jpeg" alt="bandeira do egito" data-flag="egito">
+            </div>
+
+            <div class="flag" data-flag="etiopia">
+                <img class="flag-img" src="/img/etiopia.jpeg" alt="bandeira da etiopia" data-flag="etiopia">
+            </div>
+
+            <div class="flag" data-flag="ira">
+                <img class="flag-img" src="/img/ira.jpeg" alt="bandeira do irã" data-flag="ira">
+            </div>
+
+            <div class="flag" data-flag="iraque">
+                <img class="flag-img" src="/img/iraque.jpeg" alt="bandeira do iraque" data-flag="iraque">
+            </div>
+
+            <div class="flag" data-flag="islandia">
+                <img class="flag-img" src="/img/islandia.jpeg" alt="bandeira da islandia" data-flag="islandia">
+            </div>
+
+            <div class="flag" data-flag="jamaica">
+                <img class="flag-img" src="/img/jamaica.jpeg" alt="bandeira da jamaica" data-flag="jamaica">
+            </div>
+
+            <div class="flag" data-flag="kiribati">
+                <img class="flag-img" src="/img/kiribati.jpeg" alt="bandeira do kiribati" data-flag="kiribati">
+            </div>
+
+            <div class="flag" data-flag="mocambique">
+                <img class="flag-img" src="/img/mocambique.jpeg" alt="bandeira de moçambique" data-flag="mocambique">
+            </div>
+
+            <div class="flag" data-flag="noruega">
+                <img class="flag-img" src="/img/noruega.jpeg" alt="bandeira da noruega" data-flag="noruega">
+            </div>
+
+            <div class="flag" data-flag="reino-unido">
+                <img class="flag-img" src="/img/reino-unido.jpeg" alt="bandeira do reino-unido" data-flag="reino-unido">
+            </div>
+
+            <div class="flag" data-flag="siria">
+                <img class="flag-img" src="/img/siria.jpeg" alt="bandeira da siria" data-flag="siria">
+            </div>
+
+            <div class="flag" data-flag="zimbabue">
+                <img class="flag-img" src="/img/zimbabue.jpeg" alt="bandeira do zimbabue" data-flag="zimbabue">
+            </div>
+        </div>
+
+        <div class="countries-names">
+            <button class="country" data-flag="brasil">Brasil</button>
+            <button class="country" data-flag="argentina">Argentina</button>
+            <button class="country" data-flag="cuba">Cuba</button>
+            <button class="country" data-flag="ira">Irã</button>
+            <button class="country" data-flag="reino-unido">Reino Unido</button>
+            <button class="country" data-flag="jamaica">Jamaica</button>
+            <button class="country" data-flag="egito">Egito</button>
+            <button class="country" data-flag="iraque">Iraque</button>
+            <button class="country" data-flag="zimbabue">Zimbábue</button>
+            <button class="country" data-flag="mocambique">Moçambique</button>
+            <button class="country" data-flag="siria">Siria</button>
+            <button class="country" data-flag="kiribati">Kiribati</button>
+            <button class="country" data-flag="islandia">Islândia</button>
+            <button class="country" data-flag="noruega">Noruega</button>
+            <button class="country" data-flag="etiopia">Etiópia</button>
+        </div>
+    </main>
+
+    <button class="restart" onclick="startGame()">Reiniciar</button>
+
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
