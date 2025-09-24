@@ -96,18 +96,24 @@
             <button class="country" data-flag="noruega">Noruega</button>
             <button class="country" data-flag="reino-unido">Reino Unido</button>
             <button class="country" data-flag="siria">Siria</button>
-            <button class="country" data-flag="zimbabue">Zimbábue</button>      
+            <button class="country" data-flag="zimbabue">Zimbábue</button>
         </div>
     </main>
+
+    <div id="victory-modal" class="modal hide-modal">
+        <div class="modal-content">
+            <h2>🎉 Parabéns!</h2>
+            <p id="victory-message"></p>
+            <button id="restart-btn">🔄 Jogar Novamente</button>
+        </div>
+    </div>
 
     <button class="restart" onclick="startGame()">Reiniciar</button>
 
     <script src="script.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
 </body>
 
-
 </html>
-
-
-
