@@ -94,6 +94,7 @@ function checkMatch() {
             selectedFlagElement.classList.add("matched");
             selectedCountryButton.classList.add("correct");
             selectedCountryButton.disabled = true;
+            matched++;
 
             // Reseta apenas os destaques de seleção
             resetSelections();
@@ -121,7 +122,41 @@ function checkMatch() {
         if (matched === document.querySelectorAll(".flag").length) {
             clearInterval(timerInterval);
             setTimeout(() => {
-                alert(`🎉 Parabéns! Você venceu em ${moves} movimentos e ${time} segundos!`);
+                const victoryModal = document.getElementById("victory-modal");
+                const victoryMessage = document.getElementById("victory-message");
+
+                victoryMessage.textContent = `Você venceu em ${moves} movimentos e ${time} segundos!`;
+                victoryModal.classList.remove("hide-modal");
+
+                // 🎊 Explosão de confete
+                confetti({
+                    particleCount: 200,
+                    spread: 120,
+                    origin: { y: 0.6 }
+                });
+
+                // 🌈 Chuva de confete
+                const duration = 2 * 1000;
+                const end = Date.now() + duration;
+
+                (function frame() {
+                    confetti({
+                        particleCount: 5,
+                        angle: 60,
+                        spread: 55,
+                        origin: { x: 0 }
+                    });
+                    confetti({
+                        particleCount: 5,
+                        angle: 120,
+                        spread: 55,
+                        origin: { x: 1 }
+                    });
+
+                    if (Date.now() < end) {
+                        requestAnimationFrame(frame);
+                    }
+                })();
             }, 300);
         }
     }
@@ -144,6 +179,10 @@ function shuffle(container) {
     }
 }
 
+document.getElementById("restart-btn").addEventListener("click", () => {
+    document.getElementById("victory-modal").classList.add("hide-modal");
+    startGame();
+});
 
 // Inicializa o jogo ao carregar
 startGame();
