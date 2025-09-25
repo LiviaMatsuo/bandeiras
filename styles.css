@@ -237,3 +237,75 @@ img:hover {
 #restart-btn:hover {
     background: #45a049;
 }
+
+@media (max-width: 1100px) {
+    .flags-section {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 600px;
+    }
+
+    .flag {
+        max-width: 100px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .countries-names {
+        width: 100%;
+    }
+
+    .countries-names button {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width : 650px) {
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .stats {
+        font-size: 12px;
+    }
+
+    .flags-section {
+        width: 300px;
+        margin-bottom: 10px;
+    }
+
+    .flag {
+        max-width: 80px;
+    }
+
+    .countries-names {
+        max-width: 491px;
+    }
+
+    button.country {
+        margin: 8px;
+        width: 7rem;
+    }
+
+    button.restart {
+        font-size: 1rem;
+        width: 30vw;
+        margin: 0;
+    }
+}
+
+@media (max-width : 390px) {
+    .countries-names {
+        max-width: 310px;
+    }
+
+    button.country {
+        margin: 8px;
+        width: 5.45rem;
+        font-size: .7rem;
+    } 
+}
