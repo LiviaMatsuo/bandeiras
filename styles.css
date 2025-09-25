@@ -91,8 +91,9 @@ button.restart:hover {
 
 img {
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 6px;
+    display: block;
 }
 
 img:hover {
@@ -100,19 +101,25 @@ img:hover {
 }
 
 .selected {
-    border: 5px solid rgb(43, 240, 25);
+    box-sizing: border-box;
+    border: 4px solid rgb(43, 240, 25);
+}
+
+.flag {
+    box-sizing: border-box;
+    padding: 4px;
+    border-radius: 12px;
+    background: #fff;
 }
 
 .flag.selected {
-    border: 5px solid blue;
-    border-radius: 12px;
+    border: 4px solid blue;
 }
 
 .flag.matched {
     opacity: 0.4;
     pointer-events: none;
-    border: 5px solid green;
-    border-radius: 12px;
+    border: 4px solid green;
 }
 
 .country.wrong {
@@ -122,9 +129,8 @@ img:hover {
 }
 
 .flag.wrong-flag {
-    border: 5px solid red;
+    border: 4px solid red;
     animation: shake 0.3s ease;
-    border-radius: 12px;
 }
 
 @keyframes shake {
