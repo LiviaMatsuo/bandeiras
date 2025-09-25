@@ -107,7 +107,6 @@ img:hover {
 
 .flag {
     box-sizing: border-box;
-    padding: 4px;
     border-radius: 12px;
     background: #fff;
 }
@@ -319,4 +318,3 @@ img:hover {
         font-size: .7rem;
     }
 }
-
